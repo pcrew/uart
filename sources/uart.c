@@ -11,8 +11,9 @@ int uart_open(char *dev)
 	}
 
 	r = tcflush(fd, TCIOFLUSH);
-		if (-1 == r)
-			return 1;
+	if (-1 == r) {
+		return 1;
+	}
 
 	return fd;
 }
